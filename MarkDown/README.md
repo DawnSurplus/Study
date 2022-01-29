@@ -297,12 +297,21 @@
     > ```
     > ![DawnSurplus](/Image/cat.jpg "DawnSurplus")<br/>
     > ```
-    > ![DawnSurplus](/Image/cat.jpg "DawnSurplus")
+    > ![DawnSurplus](https://user-images.githubusercontent.com/75068451/151659133-ae67b8fb-c57d-4731-9d5f-e4d57d9f5246.jpg)
 
 <br/>
 
-- ### 8.2 링크
+- ### 8.2 Git Readme에 업로드
+    - 이미지파일을 Repository issue에 Drag/Drop 시 아래와 같은 형식으로 변환되며, 이를 Readme 파일에 Copy/Paste
+    > ```
+    > ![DawnSurplus](https://user-images.githubusercontent.com/75068451/151659133-ae67b8fb-c57d-4731-9d5f-e4d57d9f5246.jpg)
+    > ```
+    > ![DawnSurplus](https://user-images.githubusercontent.com/75068451/151659133-ae67b8fb-c57d-4731-9d5f-e4d57d9f5246.jpg)
+
+<br/>
+
+- ### 8.3 링크
     > ```
     > ![DawnSurplus](/Image/cat.jpg "DawnSurplus")<br/>
     > ```
-    > [![DawnSurplus](/Image/cat.jpg)](https://github.com/DawnSurplus/Study)
+    > [![DawnSurplus](https://user-images.githubusercontent.com/75068451/151659133-ae67b8fb-c57d-4731-9d5f-e4d57d9f5246.jpg)](https://github.com/DawnSurplus/Study)
