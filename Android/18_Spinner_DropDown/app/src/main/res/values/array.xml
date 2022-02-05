@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+        <item>Dawn</item>
+        <item>새벽</item>
+        <item>Surplus</item>
+        <item>잉여</item>
+    </string-array>
+
+</resources>
