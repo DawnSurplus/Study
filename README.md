@@ -4,4 +4,5 @@
 - ## Android
 - ## DataBase
   - mySQL
+- ## TypeScript
 - ## Technology Term
