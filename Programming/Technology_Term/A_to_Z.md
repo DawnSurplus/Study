@@ -10,7 +10,7 @@
 
 - ### `백엔드 (Back-end)`
   - 유저에게 보이지 않는 서비스의 뒷단
-  - ex) DB, API와 같은 서버 영역
+  - ex) DB, API와 같은 [서버](#서버-server) 영역
 </br></br>
 
 - ### `풀스택 (Full-stack)`
@@ -28,7 +28,21 @@
   - 주로 [서버](#서버-server)에 접속해 서비스를 요청하고 제공받는 주체
   - 사용자의 의미로 사용
 </br></br>
+
+- ### `클라우드 (Cloud)`
+  - `IaaS (Infrastructure as a Service)`</br>
+    --> 서비스로 제공되는 인프라</br>
+    --> 하드웨어 자원의 일부(가상 컴퓨터)를 떼어주는 것</br>
+  - `PaaS (Platform as a Service)`</br>
+    --> 플랫폼이 서비스로 제공</br>
+    --> ex) AWS Elastic Beanstalk, HEROKU, Git, ...</br>
+  - `SaaS (Software as a Service)`</br>
+    --> 사용자들이 바로 온라인으로 이용할 수 있는 서비스</br>
+    --> 완전히 만들어진 소프트웨어를 서비스로 제공</br>
+    --> ex) Slack, DropBox, 구글닥스, SNS, E-mail, Youtube, ...
 </br></br>
+</br></br>
+
 
 
 
