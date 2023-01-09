@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Scrapper</title>
+  <!-- pico css 사용 -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+  <!-- 가운데 정렬 -->
+  <main class="container">
+    <hgroup>
+      <h1>Search Results for "{{keyword}}" :</h1>
+      <a href="/export?keyword={{keyword}}">Export to file</a>
+    </hgroup>
+    <!-- 테이블 생성 -->
+    <figure>
+      <table role="grid">
+      <!-- 헤더 생성 -->
+      <thead>
+        <!-- row 생성 -->
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Location</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <!-- 셀 내용 생성 -->
+      <tbody>
+        {% for job in jobs %}
+        <!-- row 생성 -->
+        <tr>
+          <td>{{job.title}}</td>
+          <td>{{job.company}}</td>
+          <td>{{job.location}}</td>  
+          <td><a href="{{job.link}}" target="_blank">Apply now &rarr;</a></td>
+        </tr>    
+        {% endfor %}
+      </tbody>
+    </table>
+    </figure>
+  </main>
+</body>
+  
+</html>
