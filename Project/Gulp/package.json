@@ -1,0 +1,20 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "Learn Gulp by builing development environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "gulp dev",
+    "build" : "gulp build"
+  },
+  "author": "Dawn Surplus",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "gulp-cli": "^2.3.0"
+  }
+}
