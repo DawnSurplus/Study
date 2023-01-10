@@ -9,6 +9,7 @@ import autoprefixer from "gulp-autoprefixer"
 import miniCSS from "gulp-csso"
 import bro from "gulp-bro"
 import babelify from "babelify"
+import ghPages from 'gulp-gh-pages'
 
 const sass = gulp_sass(node_sass);
 
@@ -38,6 +39,10 @@ const routes = {
         watch: "src/js/**/*.js",
         src: "src/js/main.js",
         dest: "build/js"
+    },
+
+    gh:{
+        publish: ".publish"
     }
 };
 
@@ -49,7 +54,7 @@ const pug = () =>
     .pipe(gpug())                       // pug 처리를 하고
     .pipe(gulp.dest(routes.pug.dest));   // dest로 보낸다
 
-const clean = () => del([routes.pug.dest]);
+const clean = () => del([routes.pug.dest, routes.gh.publish]);
 
 // livereload : 파일을 저장하면 자동으로 새로고침
 // open : localhost로 브라우저를 Open
@@ -90,11 +95,19 @@ const js = () =>
     .pipe(gulp.dest(routes.js.dest));
 
 
+
+const gh = () => 
+    gulp.src("build/**/*").pipe(ghPages());
+
+
+
 const prepare = gulp.series([clean, img]);
 const assets = gulp.series([pug, styles, js]);
 // 두가지 Task를 동시에 수행하길 원한다면 parallel사용
-const postDev = gulp.parallel([webserver, watch]);    // 웹서버 실행후 변경사항 체크, 
+const live = gulp.parallel([webserver, watch]);    // 웹서버 실행후 변경사항 체크, 
 
 
 
-export const dev = gulp.series([prepare, assets, postDev]);
+export const dev = gulp.series([prepare, assets, live]);
+export const build = gulp.series([prepare, assets]);
+export const deploy = gulp.series([build, gh, clean]);
